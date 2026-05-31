@@ -1,65 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Title: add your Portfolio websites's title here -->
     <title>Rowan Hall | Developer</title>
-
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="Rowan Hall, skill" />
-
-    <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="Rowan Hall | Developer" />
-
-    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
+    <meta name="description" content="Rowan Hall — Computer Science student at UVic. Building things with code." />
+    <meta name="keywords" content="Rowan Hall, developer, UVic, computer science, portfolio" />
     <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+    <meta name="theme-color" content="#080808" />
 
-    <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
-
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
-    <meta property="og:url" content="https://devfolio.js.org/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
     <meta property="og:title" content="Rowan Hall | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-    <meta
-      property="og:image"
-      content="https://devfolio.js.org/assets/devfolio.png"
-    />
+    <meta property="og:description" content="Computer Science student at UVic. Building things with code." />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
     <meta property="twitter:title" content="Rowan Hall | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
+    <meta property="twitter:description" content="Computer Science student at UVic. Building things with code." />
 
-    <!-- link tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!-- FontAwesome Icons link -->
+    <!-- FontAwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -67,160 +32,184 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script defer src="./javascript/scrollreveal.min.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="./javascript/scrollveal.js"
-    ></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- Hero Section -->
-    <div id="hero">
-      <section class="container" style="text-align: left;">
-        <h1 class="hero-title" >
-          Hi, my name is <span class="text-color-main name">Rowan Hall</span>
-          <br />
-          I create, build, and deliver.
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="mailto:rowanhall@uvic.ca">Get in touch</a>
-        </p>
-      </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
-    </div>
-    <!-- /END Hero Section -->
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#" class="nav__logo">👾</a>
+      <div class="nav__links">
+        <a href="./assets/softwarev7.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__greeting reveal">Hi, I'm</p>
+        <h1 class="hero__name reveal">Rowan<br />Hall</h1>
+        <p class="hero__tagline reveal"></p>
+        <div class="hero__cta reveal">
+          <a href="mailto:rowancedarhall@gmail.com" class="btn btn--primary">Get in touch</a>
+          <a href="./assets/softwarev7.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Resume</a>
+          <a href="#projects" class="btn btn--ghost">View work <span aria-hidden="true">&darr;</span></a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="row about-wrapper">
-          <div class="about-wrapper__image">
+        <h2 class="section-label reveal">Selected Work</h2>
+
+        <article class="project reveal">
+          <div class="project__info">
+            <span class="project__number" aria-hidden="true">01</span>
+            <h3 class="project__title">CrossList</h3>
+            <p class="project__desc">
+              Multi-platform resale automation tool. Manage inventory and publish listings across Facebook Marketplace, Grailed, eBay, Depop, and Shopify. Reverse-engineered GraphQL/REST APIs for cross-listing, built a Chrome extension for auth token capture, and automated delisting via Stripe webhooks to prevent double sales.
+            </p>
+            <div class="project__tags">
+              <span>Next.js 14</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a
+              href="https://www.crosslist.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline"
+              >Visit Site</a
+            >
+          </div>
+          <div class="project__image-wrap">
+            <!-- Replace src with your X-LIST screenshot, e.g. ./assets/xlist.png -->
+            <div class="project__image project__image--placeholder"></div>
+          </div>
+        </article>
+
+        <article class="project project--reverse reveal">
+          <div class="project__info">
+            <span class="project__number" aria-hidden="true">02</span>
+            <h3 class="project__title">LinguaLearn</h3>
+            <p class="project__desc">
+              AI-powered Chinese language learning web app. Fine-tuned a Qwen 2.5 7B LLM using QLoRA on a custom synthetic dataset for JSON grammar corrections, deployed on RunPod serverless GPUs. Features conversation persistence, structured feedback, and containerized multi-service architecture.
+            </p>
+            <div class="project__tags">
+              <span>FastAPI</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+              <span>Hugging Face</span>
+              <span>PyTorch</span>
+            </div>
+            <a
+              href="https://github.com/RowanHall/lingualearn"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline"
+              >Source Code</a
+            >
+          </div>
+          <div class="project__image-wrap">
+            <!-- Replace src with your LinguaLearn screenshot, e.g. ./assets/lingualearn.png -->
+            <div class="project__image project__image--placeholder"></div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__info">
+            <span class="project__number" aria-hidden="true">03</span>
+            <h3 class="project__title">E-Commerce Fashion Platform</h3>
+            <p class="project__desc">
+              Full-stack designer fashion platform with React TypeScript frontend and Flask Python backend. PostgreSQL product storage, S3 media hosting via presigned URLs, and serverless deployment with Docker and AWS Lambda.
+            </p>
+            <div class="project__tags">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Flask</span>
+              <span>PostgreSQL</span>
+              <span>AWS</span>
+            </div>
+            <a
+              href="https://github.com/RowanHall/conways-goods"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline"
+              >Source Code</a
+            >
+          </div>
+          <div class="project__image-wrap">
             <img
-              class="img-fluid"
-              src="./assets/profile.png"
-              alt="Profile Image"
-              width="450"
-              height="350"
+              src="./assets/website_ss.png"
+              alt="E-Commerce platform project"
+              class="project__image"
+              width="1366"
+              height="767"
             />
           </div>
-          <div class="about-wrapper__info">
-            <p class="about-wrapper__info-text">
-              Hi, I'm Rowan Hall, an undergraduate student at UVic studying Computer Science. I'm passionate about technology and enjoy working on projects that challenge me to grow both academically and professionally.
+        </article>
 
-
+        <article class="project project--reverse reveal">
+          <div class="project__info">
+            <span class="project__number" aria-hidden="true">04</span>
+            <h3 class="project__title">Morse Code LED Signal Processor</h3>
+            <p class="project__desc">
+              Text-to-Morse code conversion system built with Assembly and Arduino. Real-time LED transmission protocols demonstrating low-level hardware control and embedded systems design.
             </p>
-            <p class="about-wrapper__info-text">
-              When I'm not in class, you'll find me hiking or collaborating on open-source projects. I believe in continuous learning and love connecting with others who share similar interests in software development.
-            </p>
-            <p class="about-wrapper__info-text">
-             I'm always looking for new opportunities to apply my skills and make a meaningful impact through internships, research, and projects . Feel free to reach out if you'd like to connect or discuss potential collaborations.
-            </p>
-            <span class="about-wrapper__cta">
-              <a href="#" class="cta-btn cta-btn--resume">View Resume</a>
-            </span>
+            <div class="project__tags">
+              <span>Assembly</span>
+              <span>Arduino</span>
+              <span>Embedded</span>
+            </div>
+            <a
+              href="https://github.com/RowanHall/morse-code-led/tree/main"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline"
+              >Source Code</a
+            >
           </div>
-        </div>
+          <div class="project__image-wrap">
+            <img
+              src="./assets/arduino.jpg"
+              alt="Morse Code LED project"
+              class="project__image"
+              width="1366"
+              height="767"
+            />
+          </div>
+        </article>
       </div>
     </section>
-    <!-- /END About Section -->
 
-    <!--Projects Section-->
-    <section id="projects">
+    <!-- Contact -->
+    <section id="contact" class="contact">
       <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Morse Code LED Signal Processor</h3>
-              <p class="project-wrapper__text-info">
-                Engineered text-to-Morse code conversion system using Assembly language and Arduino microcontroller. Developed real-time LED transmission protocols demonstrating low-level hardware control and embedded systems design. Delivered functional prototype showcasing signal processing and hardware integration expertise.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://github.com/RowanHall/morse-code-led/tree/main" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/arduino.jpg"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">E-Commerce Fashion Platform</h3>
-              <p class="project-wrapper__text-info">
-                Developed full-stack designer fashion e-commerce platform using React TypeScript frontend and Flask Python backend. Integrated secure JWT authentication, PayPal payment processing, and AWS S3 storage for product images. Built comprehensive admin panel with CRUD operations, shopping cart functionality, and responsive UI using CSS modules and PostgreSQL database management.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a href="https://github.com/RowanHall/conways-goods" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/website_ss.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-        </div>
+        <a href="mailto:rowancedarhall@gmail.com" class="btn btn--primary btn--lg reveal">Get in Touch</a>
       </div>
     </section>
-    <!-- End Projects Section -->
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">Let's connect!</p>
-          <a href="mailto:rowanhall@uvic.ca" class="cta-btn cta-btn--resume">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
-
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
+      <div class="container footer__inner">
+        <div class="footer__socials">
           <a
             href="https://www.linkedin.com/in/rowan-hall-b10165253/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="linkedin"
+            aria-label="LinkedIn"
           >
             <i class="fa-brands fa-linkedin"></i>
           </a>
@@ -228,20 +217,52 @@
             href="https://github.com/RowanHall"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="github"
+            aria-label="GitHub"
           >
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
-        <hr />
+        <p class="footer__copy">&copy; <span id="year"></span> Rowan Hall</p>
       </div>
     </footer>
-    <!-- END Footer Section -->
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll reveal with IntersectionObserver
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const siblings = entry.target.parentElement.querySelectorAll(":scope > .reveal");
+              const index = Array.from(siblings).indexOf(entry.target);
+              entry.target.style.transitionDelay = index * 0.12 + "s";
+              entry.target.classList.add("revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+
+      // Navbar on scroll
+      const nav = document.querySelector(".nav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("nav--scrolled", window.scrollY > 60);
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
     </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
   </body>
 </html>
